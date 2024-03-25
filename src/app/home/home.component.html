@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row">
+        <!--About me-->
+        <div class="col-lg shadow border m-1">
+            <div class="text-center">
+                <h2>About Me</h2>
+                <img src="../../assets/linkedinavi.jpg" alt="Headshot Photo" width="256" height="256" class="rounded-circle">
+                <p>
+                Hello! I am a project manager for Chick-fil-A in Fort Worth, Texas.
+                </p>
+
+                <p>
+                I have a passion for people, gaming, problem-solving, and all things that challenge me to think creatively. In my role at Chick-fil-A, I am able to combine my love for people with my skills in leadership and training, helping to develop and cultivate talent within our organization. This role also grants me the opportunity to manage the big picture growth of the business including sales, analytics, cultural development, human resources, and systemic development.
+                </p>
+
+                <p>
+                I am driven by a desire to continuously learn and grow, both personally and professionally. I believe that every challenge presents an opportunity to improve, and I approach each new endeavor with enthusiasm and a willingness to tackle whatever obstacles come my way.
+                </p>
+            </div>
+        </div>
+
+        <!--Featured Project-->
+        <div class="col-lg shadow border m-1">
+            <div class="text-center">
+                <h2>Featured Project</h2>
+                <h4>{{featuredProject.name}}</h4>
+            </div>
+
+
+            <carousel>
+
+                <div *ngFor="let picture of featuredProject.pictures">
+                    <slide>
+                        <img src={{picture}} alt="slide image" style="display: block; width: 100%;">
+                    </slide>
+                </div>
+
+            </carousel>
+
+            <p class="mt-2">{{featuredProject.summary}}</p>
+            <p>Visit the <a href="/portfolio">Portfolio</a> section to learn more!</p>
+
+        </div>
+    </div>
+</div>
